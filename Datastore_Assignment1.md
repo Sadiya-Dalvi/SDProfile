@@ -36,3 +36,17 @@ add multiple values
 query = client.query(kind="movies")
 query.add_filter("name", "=", Jumanji)
 query.add_filter("releaseyear", "=", 2007)
+
+
+
+5. To load the complete movielens dataset, use the attached movies.py script and run in the gcp command shell.
+
+6. Preview of the data
+
+![Datastore screenshot](http://url/to/img.png)
+
+
+query = client.query(kind="movies")
+query.add_filter("Genre", "=", Fantasy)
+
+
