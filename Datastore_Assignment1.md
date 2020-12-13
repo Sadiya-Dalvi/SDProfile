@@ -24,7 +24,6 @@ entity.update({
 		"genre_id" : 2
 })
 client.put(entity)
-# Then get by key for this entity
 result = client.get(key)
 print(result)
 
@@ -43,7 +42,7 @@ query.add_filter("releaseyear", "=", 2007)
 
 6. Preview of the data
 
-![Datastore screenshot](http://url/to/img.png)
+![Datastore screenshot](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/datastore.jpg)
 
 
 query = client.query(kind="movies")
