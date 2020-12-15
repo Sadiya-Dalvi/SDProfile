@@ -19,7 +19,7 @@ Loaded data under my project for the  NYC City Taxi DATASET
 
 uploaded movielens data from datastore to bigquery using the export utility
 
-![Upload data from datastore](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/datastoreupload.png)
+![Upload data from datastore](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/datastore upload.png)
 
 # Query Run Comparison
 
