@@ -87,14 +87,16 @@ UnION ALL
 SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM compact-cell-290609.NewYorkCityTaxi.tlc_fhv_trips_2017
 order by TripYear`
 
-Query Result
-
 Query results
 
 Query complete (1.9 sec elapsed, 2.9 GB processed)
+
 Row	TripYear	TripCount	
+
 1	  2015 63867609
+
 2	  2016 133285141
+
 3	 2017 192092698
 
 
@@ -107,8 +109,13 @@ ORDER BY TripYear`
 Query results are as follows:
 
 Query complete (1.5 sec elapsed, 2.9 GB processed)
+
 Row	TripYear	TripCount	
+
 1	  2015 63867609
+
 2	  2016 133285141
+
 3	 2017 192092698
 
+Optimization was observed.
