@@ -77,4 +77,37 @@ Row	 trips
 1	   1421052
 
 Got some impressive results above.
+##Example2
+
+Ran the following query to  get the number of trips per year made by a yellow taxi in New York
+
+`SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2009`
+UNION ALL
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2010`
+UNION ALL 
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2011`
+UNION ALL
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2012`
+UNION ALL
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2013`
+UNION ALL
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2014`
+UNION ALL
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2015`
+UNION ALL
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2016`
+order by TripYear`
+
+Query Result
+
+![query result1](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/query1png.png)
+
+Used wild cared (*) in the above query to get the result
+
+`SELECT EXTRACT(YEAR from pickup_datetime) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_*`
+GROUP BY TripYear
+ORDER BY TripYear`
+
+Query results are as follows:
+![query result2](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/query2.png)
 
