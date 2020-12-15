@@ -38,8 +38,10 @@ WHERE
   
  Query results for the above query are as follows:
 
-`Query complete (2.4 sec elapsed, 293.5 MB processed)<br />
-Row	trips<br />
+`Query complete (2.4 sec elapsed, 293.5 MB processed)
+
+Row	trips
+
 1	1421052`
 
 Optimized the query by using partioning and cluster tables. 
