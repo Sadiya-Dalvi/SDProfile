@@ -23,6 +23,8 @@ uploaded movielens data from datastore to bigquery using the export utility
 
 # Query Run Comparison
 
+##First Example
+
 1.Imported the NYC Taxi dataset in Bigquery and wrote the following query:
 
 Find the number of trips starting from 01-Jan-2015 to 31-Jan-2015 with less than 5 passengers in the taxi:
@@ -72,7 +74,7 @@ Query complete (0.3 sec elapsed, 23 MB processed)
 
 Row	 trips	
 
-1	   1421052`
+1	   1421052
 
 Got some impressive results above.
 
