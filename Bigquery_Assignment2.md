@@ -38,11 +38,11 @@ WHERE
   
  Query results for the above query are as follows:
 
-`Query complete (2.4 sec elapsed, 293.5 MB processed)
+Query complete (2.4 sec elapsed, 293.5 MB processed)
 
 Row	trips
 
-1	1421052`
+1	  1421052
 
 Optimized the query by using partioning and cluster tables. 
 
@@ -68,9 +68,11 @@ WHERE
 
 Query results for the above query are as follows:
 
-`Query complete (0.3 sec elapsed, 23 MB processed)
-<br>Row	trips	
-<br>1	  1421052`
+Query complete (0.3 sec elapsed, 23 MB processed)
+
+Row	 trips	
+
+1	   1421052`
 
 Got some impressive results above.
 
