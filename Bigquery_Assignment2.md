@@ -78,36 +78,37 @@ Row	 trips
 
 Got some impressive results above.
 ##Example2
+Ran the following query to  get the number of trips per year made by fhv taxis
 
-Ran the following query to  get the number of trips per year made by a yellow taxi in New York
-
-`SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2009`
+`SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM compact-cell-290609.NewYorkCityTaxi.tlc_fhv_trips_2015
 UNION ALL
-SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2010`
-UNION ALL 
-SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2011`
-UNION ALL
-SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2012`
-UNION ALL
-SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2013`
-UNION ALL
-SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2014`
-UNION ALL
-SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2015`
-UNION ALL
-SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_2016`
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM compact-cell-290609.NewYorkCityTaxi.tlc_fhv_trips_2016
+UnION ALL
+SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM compact-cell-290609.NewYorkCityTaxi.tlc_fhv_trips_2017
 order by TripYear`
 
 Query Result
 
-![query result1](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/query1png.png)
+Query results
+
+Query complete (1.9 sec elapsed, 2.9 GB processed)
+Row	TripYear	TripCount	
+1	  2015 63867609
+2	  2016 133285141
+3	 2017 192092698
+
 
 Used wild cared (*) in the above query to get the result
 
-`SELECT EXTRACT(YEAR from pickup_datetime) as TripYear, count(1) as TripCount FROM `bigquery-public-data.new_york.tlc_yellow_trips_*`
+`SELECT EXTRACT(YEAR from pickup_datetime) as TripYear, count(1) as TripCount FROM compact-cell-290609.NewYorkCityTaxi.tlc_fhv_trips_*
 GROUP BY TripYear
 ORDER BY TripYear`
 
 Query results are as follows:
-![query result2](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/query2.png)
+
+Query complete (1.5 sec elapsed, 2.9 GB processed)
+Row	TripYear	TripCount	
+1	  2015 63867609
+2	  2016 133285141
+3	 2017 192092698
 
