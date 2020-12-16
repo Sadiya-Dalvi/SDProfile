@@ -77,7 +77,9 @@ Row	 trips
 1	   1421052
 
 Got some impressive results above.
+
 ##Example2
+
 Ran the following query to  get the number of trips per year made by fhv taxis
 
 `SELECT MAX(EXTRACT(YEAR from pickup_datetime)) as TripYear, count(1) as TripCount FROM compact-cell-290609.NewYorkCityTaxi.tlc_fhv_trips_2015
