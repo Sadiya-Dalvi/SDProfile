@@ -27,7 +27,7 @@ wrote the following query for table denormalization:
  
  <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl.png" alt="etl job to load data into movielens table" width="300" height="300">
  
- <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl_transform_table_Rows.png.png" alt="etl job to load data into movielens table" width="700" height="300">
+ <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl_transform_table_Rows.png" alt="etl job to load data into movielens table" width="700" height="300">
  
  etl_transform_table_Rows.png
  
