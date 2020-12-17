@@ -3,11 +3,31 @@
 1. Followed the Google documentation to setup bigquery for my project_id:
 https://cloud.google.com/bigquery/docs/bigquery-web-ui
 
-# Bigquery Data Import
+# Bigquery Data Import from sql db
 
-1. Loaded movielens data from csv files on to bigquery. The following figure shows the imported tables movie, genre, ratings and movie-genre-relationship table. The CSV files were located on a google cloud storage. Please click on the figure to view it clearly.
+1. Loaded movielens data from mysql db to bigquery. First I exported the data to csv files and then imported on to bigquery into a table. Then transformed the data using bigquery denormalization. I followed the steps mentioned in the following link https://cloud.google.com/solutions/performing-etl-from-relational-database-into-bigquery. The following figure shows the imported tables movie, genre, ratings and movie-genre-relationship table. The CSV files were located on a google cloud storage. Please click on the figure to view it clearly.
 
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/2020-12-16_01-41-06.png" alt="Data Import from csv" width="300" height="300">
+
+Reference Link = https://cloud.google.com/solutions/performing-etl-from-relational-database-into-bigquery
+
+wrote the following query for table denormalization:
+
+`SELECT a.movieId as movieId,
+       a.name as name, 
+       a.releaseyear as releaseyear,
+       b.rating as rating, b.userId as userid, TIMESTAMP_SECONDS(b.timestamp) as datetime,
+       c.genre_name as genre
+       from tidy-ivy-297317.movielens.movie as a, tidy-ivy-297317.movielens.ratings as b, tidy-ivy-297317.movielens.genre as c, tidy-ivy-297317.movielens.movie_rel as d
+       where
+       a.movieId = b.movieId
+       and a.movieId = d.movieId`
+       
+ The following are the results:
+ 
+ 
+ 
+       
 
 2. Data Import from public data set - NYC City Taxi Data
 
