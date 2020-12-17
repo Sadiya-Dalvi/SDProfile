@@ -31,14 +31,14 @@ wrote the following query for table denormalization:
  <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl.png" alt="etl job to load data into movielens table" width="300" height="300">
  </kbd>
  
+ 
  <kbd>
  <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl_transform_table_Rows.png" alt="etl job to load data into movielens table" width="700" height="300">
  </kbd>
 
  
        
-
-2. Data Import from public data set - NYC City Taxi Data
+# Data Import from public data set - NYC City Taxi Data
 
 Loaded data under my project for the  NYC City Taxi DATASET. Please click on the figure to view it clearly.
 
