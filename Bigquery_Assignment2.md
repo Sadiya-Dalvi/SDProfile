@@ -7,7 +7,9 @@ https://cloud.google.com/bigquery/docs/bigquery-web-ui
 
 1. Loaded movielens data from mysql db to bigquery. First I exported the data to csv files and then imported on to bigquery into a table. Then transformed the data using bigquery denormalization. I followed the steps mentioned in the following link https://cloud.google.com/solutions/performing-etl-from-relational-database-into-bigquery. The following figure shows the imported tables movie, genre, ratings and movie-genre-relationship table. The CSV files were located on a google cloud storage. Please click on the figure to view it clearly.
 
-<img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/2020-12-16_01-41-06.png" alt="Data Import from csv" width="700" height="300" style="border: 1px solid black">
+<kbd>
+<img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/2020-12-16_01-41-06.png" alt="Data Import from csv" width="700" height="300" >
+</kbd>
 
 Reference Link = https://cloud.google.com/solutions/performing-etl-from-relational-database-into-bigquery
 
@@ -25,11 +27,14 @@ wrote the following query for table denormalization:
        
  The following are the results:
  
+ <kbd> 
  <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl.png" alt="etl job to load data into movielens table" width="300" height="300">
+ </kbd>
  
+ <kbd>
  <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl_transform_table_Rows.png" alt="etl job to load data into movielens table" width="700" height="300">
- 
- etl_transform_table_Rows.png
+ </kbd>
+
  
        
 
@@ -37,13 +42,17 @@ wrote the following query for table denormalization:
 
 Loaded data under my project for the  NYC City Taxi DATASET. Please click on the figure to view it clearly.
 
+<kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/publicdata.png" alt="Data Import from Public Dataset" width="700" height="300">
+</kbd>
 
 # Upload from Datastore
 
 uploaded movielens data from datastore to bigquery using the export utility. Please click on the figure to view it clearly.
 
+<kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/datastore upload.png" alt="Upload data from datastore" width="700" height="300">
+</kbd>
 
 # Query Run Comparison
 
