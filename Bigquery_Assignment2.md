@@ -25,7 +25,11 @@ wrote the following query for table denormalization:
        
  The following are the results:
  
+ <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl.png" alt="etl job to load data into movielens table" width="300" height="300">
  
+ <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/etl_transform_table_Rows.png.png" alt="etl job to load data into movielens table" width="700" height="300">
+ 
+ etl_transform_table_Rows.png
  
        
 
@@ -39,7 +43,7 @@ Loaded data under my project for the  NYC City Taxi DATASET. Please click on the
 
 uploaded movielens data from datastore to bigquery using the export utility. Please click on the figure to view it clearly.
 
-<img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/datastore upload.png" alt="Upload data from datastore" width="300" height="300">
+<img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/datastore upload.png" alt="Upload data from datastore" width="700" height="300">
 
 # Query Run Comparison
 
