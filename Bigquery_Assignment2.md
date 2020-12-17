@@ -5,19 +5,19 @@ https://cloud.google.com/bigquery/docs/bigquery-web-ui
 
 # Bigquery Data Import
 
-1. Loaded movielens data from csv files on to bigquery. The following figure shows the imported tables movie, genre, ratings and movie-genre-relationship table. The CSV files were located on a google cloud storage.
+1. Loaded movielens data from csv files on to bigquery. The following figure shows the imported tables movie, genre, ratings and movie-genre-relationship table. The CSV files were located on a google cloud storage. Please click on the figure to view it clearly.
 
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/2020-12-16_01-41-06.png" alt="Data Import from csv" width="300" height="300">
 
 2. Data Import from public data set - NYC City Taxi Data
 
-Loaded data under my project for the  NYC City Taxi DATASET
+Loaded data under my project for the  NYC City Taxi DATASET. Please click on the figure to view it clearly.
 
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/publicdata.png" alt="Data Import from Public Dataset" width="300" height="300">
 
 # Upload from Datastore
 
-uploaded movielens data from datastore to bigquery using the export utility
+uploaded movielens data from datastore to bigquery using the export utility. Please click on the figure to view it clearly.
 
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/datastore upload.png" alt="Upload data from datastore" width="300" height="300">
 
