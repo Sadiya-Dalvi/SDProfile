@@ -42,7 +42,7 @@ query.add_filter("releaseyear", "=", 2007)
 
 6. Preview of the data
 
-![Datastore screenshot](https://github.com/Sadiya-Dalvi/SDProfile/Images/datastore.jpg)
+![Datastore screenshot](https://github.com/Sadiya-Dalvi/SDProfile/blob/Main/Images/datastore.jpg)
 
 
 query = client.query(kind="movies")
