@@ -62,9 +62,9 @@ WHERE
 
 Query complete (2.4 sec elapsed, 293.5 MB processed)
 
-Row	trips
-
-1	  1421052
+| row  | trips    |
+| ---  | -------- |
+| 1    | 1421052  |
 
 Optimized the query by using partioning and cluster tables. 
 
@@ -92,9 +92,9 @@ Query results for the above query are as follows:
 
 Query complete (0.3 sec elapsed, 23 MB processed)
 
-Row	 trips	
-
-1	   1421052
+| row  | trips    |
+| ---  | -------- |
+| 1    | 1421052  |
 
 Got some impressive results above.
 
@@ -113,13 +113,14 @@ Query results
 
 Query complete (1.9 sec elapsed, 2.9 GB processed)
 
-Row	TripYear	TripCount	
+|Row	|TripYear	|TripCount|	
+|----- |-------------|---------| 
+|1	|  2015       |63867609 |
+|----- |-------------|---------|
+|2	| 2016        |133285141|
+|----- |-------------|---------|
+|3	| 2017        |192092698|
 
-1	  2015 63867609
-
-2	  2016 133285141
-
-3	 2017 192092698
 
 
 Used wild cared (*) in the above query to get the result
@@ -132,12 +133,12 @@ Query results are as follows:
 
 Query complete (1.5 sec elapsed, 2.9 GB processed)
 
-Row	TripYear	TripCount	
-
-1	  2015 63867609
-
-2	  2016 133285141
-
-3	 2017 192092698
+|Row	|TripYear	|TripCount|	
+|----- |-------------|---------| 
+|1	|  2015       |63867609 |
+|----- |-------------|---------|
+|2	| 2016        |133285141|
+|----- |-------------|---------|
+|3	| 2017        |192092698|
 
 Optimization was observed.
