@@ -7,7 +7,7 @@ https://cloud.google.com/bigquery/docs/bigquery-web-ui
 
 1. Loaded movielens data from csv files on to bigquery. The following figure shows the imported tables movie, genre, ratings and movie-genre-relationship table. The CSV files were located on a google cloud storage.
 
-![Data Import from csv](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/2020-12-16_01-41-06.png=250x250)
+![Data Import from csv](https://github.com/Sadiya-Dalvi/SDProfile/blob/main/2020-12-16_01-41-06.png| width=100)
 
 2. Data Import from public data set - NYC City Taxi Data
 
