@@ -8,7 +8,7 @@ https://cloud.google.com/bigquery/docs/bigquery-web-ui
 1. Loaded movielens data from mysql db to bigquery. First I exported the data to csv files and then imported on to bigquery into a table. Then transformed the data using bigquery denormalization. I followed the steps mentioned in the following link https://cloud.google.com/solutions/performing-etl-from-relational-database-into-bigquery. The following figure shows the imported tables movie, genre, ratings and movie-genre-relationship table. The CSV files were located on a google cloud storage. Please click on the figure to view it clearly.
 
 <kbd>
-<img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/2020-12-16_01-41-06.png" alt="Data Import from csv" width="700" height="300" >
+<img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/movietable.png" alt="Data Import from csv" width="700" height="300" >
 </kbd>
 
 Reference Link = https://cloud.google.com/solutions/performing-etl-from-relational-database-into-bigquery
