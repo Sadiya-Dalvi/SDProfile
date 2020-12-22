@@ -1,6 +1,6 @@
 # Read a csv file from gcp cloud storage and view the contents using python. Had to import pandas and pyarrow package
 
-```import sys
+`import sys
 import csv
 import datetime
 import pandas as pd
@@ -20,10 +20,10 @@ s = StringIO(s)
 
 df = pd.read_csv(s)
 
-print(df)```
+print(df)`
 
 
-result
+# result
 
 <kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/csvfile.png" alt="Read Data from CSV File" width="700" height="300">
@@ -31,7 +31,7 @@ result
 
 # Upload a parquet file on gcp cloud storage and the view contents using python.
 
-```import sys
+`import sys
 import csv
 import datetime
 import pandas as pd
@@ -40,9 +40,9 @@ from google.cloud import storage
 
 storage_client = storage.Client()
 read_df = pd.read_parquet("gcs://movielensnosql1234567/Module3/userdata1.parquet", engine='pyarrow')
-print(read_df)```
+print(read_df)`
 
-#result
+# result
 
 <kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/parquetfile.jpg" alt="Read Data from Parquet File" width="700" height="300">
@@ -53,7 +53,7 @@ print(read_df)```
 1) Created DataProc Cluster with anaconda and jupyter
 	1 Master Node, 2 Worker Nodes
 	
-	<kbd>
+<kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/cluster.png" alt="cluster" width="700" height="300">
 </kbd>
 
@@ -61,22 +61,21 @@ print(read_df)```
 
 3) SSH into the Master VM and Imported data from public source to Master VM using the following command:
 	
-		```wget https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2019-01.csv;``` 
+ `wget https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2019-01.csv` 
 		
 4) Copied data from Master VM to Bucket (nyc-taxi-data-sadiya)using the following command:
 
-		```gsutil cp yellow_tripdata_2019-01.csv us-central1 gs://nyc-taxi-data-sadiya;```
+`gsutil cp yellow_tripdata_2019-01.csv us-central1 gs://nyc-taxi-data-sadiya`
 
 5) Opened the Jupyterlabs console and Read data to PySpark DataFrame
 
-```nyctaxi_df = spark.read.csv("gs://nyc-taxi-data-sadiya", header=True, inferSchema=True)```
-
+`nyctaxi_df = spark.read.csv("gs://nyc-taxi-data-sadiya", header=True, inferSchema=True)`
 
 4) Queries
 
 Query 1 - Average trip distance group by passenger count:
 
-```nyctaxi_df.groupby('passenger_count').agg({'trip_distance': 'mean'}).show()```
+`nyctaxi_df.groupby('passenger_count').agg({'trip_distance': 'mean'}).show()`
 ​
 +---------------+------------------+
 |passenger_count|avg(trip_distance)|
@@ -98,7 +97,7 @@ Query 1 - Average trip distance group by passenger count:
 Query 2 - Trips by passenger count ordered by passenger count in descending order
 
 
-```nyctaxi_df.groupby('passenger_count').count().orderBy(nyctaxi_df.passenger_count.desc()).show()```
+`nyctaxi_df.groupby('passenger_count').count().orderBy(nyctaxi_df.passenger_count.desc()).show()`
 
 +---------------+--------+
 |passenger_count|   count|
@@ -118,21 +117,21 @@ Query 2 - Trips by passenger count ordered by passenger count in descending orde
 
 # Do some visualizations to show a simple analysis on the data.
 
-Visualisation and plotting with Matplotlib
+## Visualisation and plotting with Matplotlib
 
-```%matplotlib inline```
+`%matplotlib inline`
 
 #creating a view to run visualizations
 
-```nyctaxi_df.createOrReplaceTempView('trips_table')
+`nyctaxi_df.createOrReplaceTempView('trips_table')`
 
 
 1.Plot a bar chart showing passenger count on x axis and  average trip distance on y axis
 
-```trips3 = spark.sql("SELECT passenger_count, avg(trip_distance)  \
+`trips3 = spark.sql("SELECT passenger_count, avg(trip_distance)  \
                    FROM trips_table \
                    GROUP BY passenger_count")
-trips3.show()```
+trips3.show()`
 
 +---------------+------------------+
 |passenger_count|avg(trip_distance)|
@@ -149,8 +148,8 @@ trips3.show()```
 |              0|2.8048238025541865|
 +---------------+------------------+
 
-plotTrip = trips3.toPandas()
-plotTrip.plot(kind="bar", x="passenger_count", y="avg(trip_distance)")
+`plotTrip = trips3.toPandas()
+plotTrip.plot(kind="bar", x="passenger_count", y="avg(trip_distance)")`
 
 <kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/vis1.png" alt="Visualization1" width="700" height="300">
@@ -158,9 +157,9 @@ plotTrip.plot(kind="bar", x="passenger_count", y="avg(trip_distance)")
 
 2.Plot a bar chart showing avg tip amount on y axis and passenger count on x axis
 
-```trips3 = spark.sql("SELECT passenger_count, avg(tip_amount)  \
+`trips3 = spark.sql("SELECT passenger_count, avg(tip_amount)  \
                    FROM trips_table \
-                   GROUP BY passenger_count")```
+                   GROUP BY passenger_count")`
 
 trips3.show()
 +---------------+------------------+
@@ -179,8 +178,8 @@ trips3.show()
 +---------------+------------------+
 
 
-plotTrip = trips3.toPandas()
-plotTrip.plot(kind="bar", x="passenger_count", y="avg(tip_amount)")
+`plotTrip = trips3.toPandas()
+plotTrip.plot(kind="bar", x="passenger_count", y="avg(tip_amount)")`
 
 <kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/vis2.png" alt="Visualization2" width="700" height="300">
