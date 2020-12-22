@@ -29,9 +29,7 @@ result
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/csvfile.png" alt="Read Data from CSV File" width="700" height="300">
 </kbd>
 
-
-
-# Upload a parquet file on gcp cloud storage and the view contents using python.##
+# Upload a parquet file on gcp cloud storage and the view contents using python.
 
 ```import sys
 import csv
