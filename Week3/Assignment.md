@@ -198,3 +198,37 @@ plotTrip.plot(kind="bar", x="passenger_count", y="avg(tip_amount)")`
 <kbd>
 <img src="https://github.com/Sadiya-Dalvi/SDProfile/blob/main/Images/vis2.png" alt="Visualization2" width="700" height="300">
 </kbd>
+
+# Transforming/Cleaning up the dataset 
+
+1) Removing Duplicates
+
+`nyctaxi_df.count()`
+
+result
+
+37518112
+
+```
+nyctaxi_df = nyctaxi_df.dropDuplicates()
+
+nyctaxi_df.count()
+```
+result
+
+37518066
+
+2)Creating dataframe where fareamount is greater than zero
+
+```
+nyctaxi_df = nyctaxi_df.filter(nyctaxi_df.fare_amount > 0)
+
+nyctaxi_df.count()
+```
+
+result
+
+37450456
+
+
+
