@@ -1,19 +1,33 @@
 # Read a csv file from gcp cloud storage and view the contents using python. Had to import pandas and pyarrow package
+`
+import sys
 
-`import sys
 import csv
+
 import datetime
+
 import pandas as pd
+
 from google.cloud import storage
+
 storage_client = storage.Client()
+
 bucket = storage_client.get_bucket('movielensnosql1234567')
+
 blob = bucket.get_blob('Module3/movies-ransform2.csv')
+
 bt = blob.download_as_string()
-from io import StringIO
+
+from io import 
+
 s = str(bt, "utf-8")
+
 s = StringIO(s)
+
 df = pd.read_csv(s)
-print(df)`
+
+print(df)
+`
 
 
 # result
@@ -23,15 +37,23 @@ print(df)`
 </kbd>
 
 # Upload a parquet file on gcp cloud storage and the view contents using python.
+```
+import sys
 
-`import sys
 import csv
+
 import datetime
+
 import pandas as pd
+
 from google.cloud import storage
+
 storage_client = storage.Client()
+
 read_df = pd.read_parquet("gcs://movielensnosql1234567/Module3/userdata1.parquet", engine='pyarrow')
-print(read_df)`
+
+print(read_df)
+```
 
 # result
 
