@@ -1,5 +1,5 @@
 # Read a csv file from gcp cloud storage and view the contents using python. Had to import pandas and pyarrow package
-`
+```
 import sys
 
 import csv
@@ -27,7 +27,7 @@ s = StringIO(s)
 df = pd.read_csv(s)
 
 print(df)
-`
+````
 
 
 # result
