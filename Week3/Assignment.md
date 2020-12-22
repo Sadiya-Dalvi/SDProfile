@@ -76,10 +76,10 @@ print(read_df)`
 Query 1 - Average trip distance group by passenger count:
 
 `nyctaxi_df.groupby('passenger_count').agg({'trip_distance': 'mean'}).show()`
-​
-+---------------+------------------+
+
+
 |passenger_count|avg(trip_distance)|
-+---------------+------------------+
+|---------------|------------------|
 |              1| 2.914812946997421|
 |              6|2.9603002111340593|
 |              3| 2.995860962968582|
@@ -90,7 +90,7 @@ Query 1 - Average trip distance group by passenger count:
 |              7| 2.122702702702703|
 |              2| 3.046500330346657|
 |              0| 2.804823802554187|
-+---------------+------------------+
+
 
 
 
@@ -99,9 +99,9 @@ Query 2 - Trips by passenger count ordered by passenger count in descending orde
 
 `nyctaxi_df.groupby('passenger_count').count().orderBy(nyctaxi_df.passenger_count.desc()).show()`
 
-+---------------+--------+
+
 |passenger_count|   count|
-+---------------+--------+
+|---------------|--------|
 |              9|      84|
 |              8|     130|
 |              7|     148|
@@ -112,7 +112,7 @@ Query 2 - Trips by passenger count ordered by passenger count in descending orde
 |              2| 5606232|
 |              1|26407729|
 |              0|  657274|
-+---------------+--------+
+
 
 
 # Do some visualizations to show a simple analysis on the data.
@@ -133,9 +133,10 @@ Query 2 - Trips by passenger count ordered by passenger count in descending orde
                    GROUP BY passenger_count")
 trips3.show()`
 
-+---------------+------------------+
+
+
 |passenger_count|avg(trip_distance)|
-+---------------+------------------+
+|---------------|------------------|
 |              1|2.9148129469974213|
 |              6| 2.960300211134059|
 |              3|2.9958609629685813|
@@ -146,7 +147,7 @@ trips3.show()`
 |              7| 2.122702702702703|
 |              2| 3.046500330346657|
 |              0|2.8048238025541865|
-+---------------+------------------+
+
 
 `plotTrip = trips3.toPandas()
 plotTrip.plot(kind="bar", x="passenger_count", y="avg(trip_distance)")`
@@ -159,12 +160,12 @@ plotTrip.plot(kind="bar", x="passenger_count", y="avg(trip_distance)")`
 
 `trips3 = spark.sql("SELECT passenger_count, avg(tip_amount)  \
                    FROM trips_table \
-                   GROUP BY passenger_count")`
+                   GROUP BY passenger_count")
+trips3.show()`
 
-trips3.show()
-+---------------+------------------+
+
 |passenger_count|   avg(tip_amount)|
-+---------------+------------------+
+|---------------|------------------|
 |              1|2.1442412670175104|
 |              6| 2.156313263247605|
 |              3| 2.082967899986515|
@@ -175,7 +176,7 @@ trips3.show()
 |              7| 6.922364864864865|
 |              2| 2.135891960946389|
 |              0|2.0820742795242144|
-+---------------+------------------+
+
 
 
 `plotTrip = trips3.toPandas()
