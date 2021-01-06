@@ -1,4 +1,3 @@
-
 # Using GCP Datastore
 
 1. Create a firestore in datastore mode.
@@ -10,7 +9,7 @@ follow the instructions given in the link https://cloud.google.com/datastore/doc
 
 from google.cloud import datastore
 # Create, populate and persist an entity with keyID=1234
-client = datastore.Client()
+```client = datastore.Client()
 key = client.key('movies', 1234)
 entity = datastore.Entity(key=key)
 entity.update({
@@ -26,16 +25,16 @@ entity.update({
 client.put(entity)
 result = client.get(key)
 print(result)
-
+```
 
 add multiple values
 
 4. query the datastore
-
+```
 query = client.query(kind="movies")
 query.add_filter("name", "=", Jumanji)
 query.add_filter("releaseyear", "=", 2007)
-
+```
 
 
 5. To load the complete movielens dataset, use the attached movies.py script and run in the gcp command shell.
