@@ -13,7 +13,8 @@ GM knew these families and could have easily removed them from their distributio
 ### Incident 2
 Vodafone in the past, had sent its customers a ‘Thank You’ message thanking them for their payment. This caused a lot of distress to the customers. Not that money had been deducted from their account nor the customers were expecting to make a payment to their Vodafone account. But they had to go through this, wondering did they have to make a payment and later they realized it was a mistake from Vodafone’s end. Vodafone had many such errors due to bad data quality and if they had better data quality, they could have saved themselves from all this embarrassment.
 
-Consequences of Bad Data Quality
+## Consequences of Bad Data Quality
+
 Some potential consequences of low data quality include:
 ·   	Low customer satisfaction
 ·   	Loss of customers
